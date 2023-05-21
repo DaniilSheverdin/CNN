@@ -18,20 +18,19 @@ def getUByteDataSet(appendix):
             data.append(np.array(image))
 
         data_list.append(np.array(data))
-        if appendix == "train/":
-            labels_list.append(np.full(len(data), i, dtype=np.uint8))
+        labels_list.append(np.full(len(data), i, dtype=np.uint8))
 
     # Объединяем массивы для изображений и меток классов
     images = np.concatenate(data_list)
-    if appendix == "train/":
-        labels = np.concatenate(labels_list)
+    labels = np.concatenate(labels_list)
 
     # Сохраняем массивы в формате idx3-ubyte
     if appendix == "train/":
-        idx2numpy.convert_to_file('train.labels.idx1-ubyte', labels)
-        idx2numpy.convert_to_file('train.images.idx3-ubyte', images)
+        idx2numpy.convert_to_file('train-labels.idx1-ubyte', labels)
+        idx2numpy.convert_to_file('train-images.idx3-ubyte', images)
     else:
-        idx2numpy.convert_to_file('valid.images.idx3-ubyte', images)
+        idx2numpy.convert_to_file('valid-images.idx3-ubyte', images)
+        idx2numpy.convert_to_file('valid-labels.idx1-ubyte', labels)
 
 getUByteDataSet("train/")
 getUByteDataSet("valid/")
