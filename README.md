@@ -1,0 +1,1 @@
+Создано в рамках курсовой работы и предназначено для классификации геометрических фигур. Практически полностью основано на https://towardsdatascience.com/convolutional-neural-networks-from-the-ground-up-c67bb41454e1
