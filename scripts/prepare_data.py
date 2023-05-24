@@ -5,7 +5,7 @@ from PIL import Image
 
 def getUByteDataSet(appendix):
     img_path = 'C:/Users/Daniil/PycharmProjects/GeometryAI/images/' + appendix
-    classes = ['square', 'circle', 'triangle', 'star']
+    classes = ['circle', 'square', 'star', 'triangle']
 
     data_list = []
     labels_list = []

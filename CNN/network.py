@@ -7,9 +7,6 @@ import pickle
 from tqdm import tqdm
 
 
-#####################################################
-############### Building The Network ################
-#####################################################
 
 def conv(image, label, params, conv_s, pool_f, pool_s):
     [f1, f2, w3, w4, b1, b2, b3, b4] = params
